@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경색과 이미지</title>
+    <style>
+        div.container{
+            background-image: url("../img/dog.jpg");
+            background-repeat: no-repeat;
+            background-position: 50% 20%;
+            background-attachment: fixed; /*배경이 속해있는 태그 영역과 상관없이 브라우저 기준으로 fixed 됨*/
+            width: 1400px;
+            height: 1080px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>배경에 색상이나 이미지 넣기</h2>
+        <ul>
+            <li>background-color : 배경색</li>
+            <li>background-image : 배경그림 (그림의 경로는 url())
+                <ul>
+                    <li>background-repeat : 반복여부 (repeat, repeat-x, repeat-y, no-repeat)</li>
+                    <li>background-position : 배경 그림의 위치 지정 (수평 위치, 수직 위치)</li>
+                    <li>background-attachment : 배경 그림의 부착 여부 <br>
+                        (fixed-배경이 속해있는 태그 영역과 상관없이 브라우저 기준으로 fixed 됨, scroll)</li>                    
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

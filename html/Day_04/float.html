@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float</title>
+
+    <style>
+        div{
+            width: 150px;
+            height: 150px;
+            background-color: palegreen;
+            border: 1px solid grey;
+        }
+
+        div.item{
+            float: left;
+            margin-left: 10px;
+        }
+
+        div.three{
+            clear: both; /*float: left; right 뭐든간에 안 따라 붙겠다.*/
+            float: right; /*혼자만 오른쪽으로 이동*/
+        }
+        p{
+            clear: both; /*float을 따라가지 않겠다는 의미*/
+        }
+
+    </style>
+
+</head>
+<body>
+    <h2>float을 이용한 배치</h2>
+    <div class="item one">하나</div>
+    <div class="item two">둘</div>
+    <div class="item three">셋</div>
+    <div class="item four">넷</div>
+    <div class="item five">다섯</div>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Fugiat saepe ipsa incidunt id iure. Illum nulla atque voluptatum inventore provident, 
+        officia placeat deserunt alias reprehenderit ut, voluptate id sint non!
+    </p>
+
+    
+</body>
+</html>

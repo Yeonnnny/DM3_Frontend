@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 콘텐츠</title>
+</head>
+<body>
+    <!--교재 132페이지-->
+    <!-- form 태그 속성
+         method : get(입력 내용이 드러남, 주로 페이지 전환 시에 사용)/post(대부분 이 방식 사용, 입력 내용이 드러나지 않음)
+         name : 폼 이름 지정
+         action : form 태그 안의 내용들을 처리해 줄 서버 상의 프로그램 지정
+         target : action 속성에서 지정한 스크립트 하일을 현재 창이 아닌 다른 위치에 열도록 지정
+    -->
+
+    <form action="" > <!-- method="post" enctype="multipart/form-data">-->   <!--method default : get-->
+        <div class="content">
+            <div class="header">
+                <h2>사용자의 정보를 입력받는 태그</h2>
+                <p>
+                    form 요소는 사용자의 데이터를 입력받는 요소들을 의미한다. <br>
+                    form 요소의 대부분은 인라인 요소이다. <br>
+                    회원 가입 화면, 로그인 화면, 회원 정보 수정 화면, 검색창 등이 모두 폼관련 태그로 구성된다.
+                </p>
+            </div>
+
+            <!--div.클래스명 입력하면 <div class="클래스명"> </div> 이 자동 완성됨-->
+            <div class="article">
+                <h3>input 태그 중 입력 상자</h3>
+                <fieldset>
+                    <legend>사용자로부터 직접 입력</legend>
+
+                    <label for="userid">User Id : </label>
+                    <input type="text" maxlength="15" name="userid" id="userid" placeholder="아이디 입력"> <!--input 태그는 항상 form 태그롸 함께 써야 함-->
+                    <!--id와 label의 for값이 같아야함 : matching을 위해-->
+                    <!--name : 서버에서의 변수명-->
+                    
+                    <label for="userpwd">User password : </label>
+                    <input type="password" maxlength="15" name="userpwd" id="userpwd" placeholder="비밀번호 입력">
+
+                    <!--hidden 타입은 보여지지 않으므로 label도 쓰지 않음-->
+                    <input type="hidden" name="hiddenData" value="서버로 전달되는 데이터값"> <!--서버에서 value를 받기 위한 변수명 : name-->
+
+                    <label for="picture">사진 첨부</label>
+                    <input type="file" name="picture" id="picture">
+
+                </fieldset>
+            </div>
+
+            <div class="article">
+                <h3>input type="radio" : 여러 항목 중에 하나만 선택할 때 사용</h3>
+                <fieldset>
+                    <legend>Location</legend>
+                    <!--name 속성은 같은 이름으로 설정해야 같은 그룹이 된다.-->
+                    <input type="radio" name="Location" checked="checked"> 서울 <!---->
+                    <input type="radio" name="Location"> 부산
+                    <input type="radio" name="Location"> 제주          
+                </fieldset>
+
+                <fieldset>
+                    <legend>성별</legend>
+                    <input type="radio" name="gender"> male
+                    <input type="radio" name="gender"> female
+                </fieldset>
+
+                <h3>select / option : 여러 항목 중에 하나만 선택할 때 사용 </h3>
+                <fieldset>
+                    <legend>출신 학교</legend>
+                    <select name="school" id="">
+                        <optgroup>
+                            <option value="서울고등학교">서울고등학교</option>
+                            <option value="경기고등학교">경기고등학교</option>
+                            <option value="부산고등학교">부산고등학교</option>
+                            <option value="제주고등학교">제주고등학교</option>
+                        </optgroup>
+                    </select>
+                    
+                </fieldset>
+                
+                <fieldset>
+                    <legend>좋아하는 색</legend>
+                    <select name="color" id="">
+                        <optgroup>
+                            <option value="RED">빨강색</option>
+                            <option value="YELLOW">노랑색</option>
+                            <option value="GREEN">초록색</option>
+                            <option value="BLUE">파란색</option>
+                        </optgroup>
+                    </select>
+                </fieldset>
+
+            </div>
+            <hr>
+            
+            <div class="article">
+                <h3>input type="checkbox" : 여러 항목 중에 여러 개를 선택할 때 사용  </h3>
+
+                <fieldset>
+                    <legend>Hobby</legend>
+                    <input type="checkbox" name="Hobby" id="" value="낚시" checked="checked"> 낚시  &nbsp;
+                    <input type="checkbox" name="Hobby" id="" value="수영"> 수영 &nbsp;
+                    <input type="checkbox" name="Hobby" id="" value="등산"> 등산 &nbsp;
+                    <input type="checkbox" name="Hobby" id="" value="골프"> 골프 &nbsp;
+                    <input type="checkbox" name="Hobby" id="" value="테니스"> 테니스 &nbsp;
+                    <input type="checkbox" name="Hobby" id="" value="헬스"> 헬스 &nbsp;
+                    <input type="checkbox" name="Hobby" id="" value="그림 그리기"> 그림 그리기 &nbsp;
+                    <input type="checkbox" name="Hobby" id="" value="독서"> 독서 &nbsp;
+                    <input type="checkbox" name="Hobby" id="" value="여행"> 여행 &nbsp;
+                </fieldset>
+                
+                <h3>select / option : multiple 속성을 이용해서 여러 개 선택할 수 있다. </h3>
+                <fieldset>
+                    <legend>좋아하는 색</legend>
+                    <select name="color2", multiple="multiple">
+                        <optgroup>
+                            <option value="RED">빨강색</option>
+                            <option value="YELLOW">노랑색</option>
+                            <option value="GREEN">초록색</option>
+                            <option value="BLUE">파란색</option>
+                        </optgroup>
+                    </select>
+                </fieldset>
+                
+            </div>
+            <hr>
+            
+            <div class="article">
+                <h3>textarea : 여러 줄 글상자</h3>
+                <label for="reason">반품 사유</label>
+                <textarea name="" id="reason" cols="100" rows="10"></textarea> <!--닫히는 태그를 붙여서 써야지 처음부터 작성할 수 있음->사이에 아무것도 없이 딱 붙여서 써야 함-->
+            </div>
+            <hr>
+
+
+            <div class="article">
+                <h3>input type="email" 이메일</h3>
+                <label for="useremail">이메일 입력</label>
+                <input type="email", id="useremail">
+                <input type="button" value="확인">
+            </div>
+            
+            
+            <br>
+            <div class="btngroup">
+                <input type="button" value="전송">
+                <input type="submit" value="전송2">
+                <input type="reset" value="취소">
+            </div>
+
+        </div>
+        <hr>
+
+
+        <ul>
+            <h4>input type의 속성</h4>
+            <li>type="text" : 한 줄짜리 텍스트를 입력하기 위한 용도</li>
+            <li>type="password" : 비밀번호 등 외부에 노출되지 않는 정보를 입력하기 위한 용도</li>
+            <li>type="hidden" : 사용자에게 보이지는 않지만 서버로 넘어가는 정보를 정의하는 필드 (반드시 value와 name을 지정해야 한다.))</li>
+            <li>type="button" : 버튼 모양을 생성. 아무런 기능도 없다. (JS와 연동해서 주로 사용(주로 유효성 검증을 위해 사용하는데 자기만의 기능을 가진 애는 사용할 수 없어서 Button 사용함))</li>
+            <li>type="submit" : form action속성에 지정한 URL(혹은 서버 프로그램-경로)로 데이터를 전달</li>
+            <li>type="reset" : 리셋 버튼(입력을 초기화)</li>
+            <li>
+                type="file" : 파일을 서버에 첨부래서 전송하기 위한 버튼. <br>
+                form 태그에 아래 2가지 정보를 반드시 추가해야 한다. 
+                <ol type="1">
+                    <li>form의 메소드는 반드시 POST 여야 한다.</li>
+                    <li>enctype="multipart/form-data" 속성을 추가해야 한다.</li>
+                </ol>
+            </li>
+        </ul>
+
+
+    </form>
+
+
+</body>
+</html>

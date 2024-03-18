@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(연습문제) Node를 이용한 고객관리 프로그램</title>
+    <script defer src="./script/A24_nodeExam.js"></script>
+    <style>
+        .inputTable{
+            width: 600px;
+            height: 120px;
+        }
+        input[type="text"],input[type="email"]{
+            width: 200px;
+            height: 35px;
+            border: 0;
+        }
+        
+        input[type="button"]{
+            width: 150px;
+            margin-left: 35%;
+        }
+        .outputTable{
+            width: 600px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h2>(연습문제) Node를 이용한 고객관리 프로그램</h2>
+    <br>
+    <hr>
+
+    <form action="">
+        <table border="1" class="inputTable">
+            <tr>
+                <th>고객 이름</th>
+                <th>연락처(전화번호)</th>
+                <th>이메일</th>
+                
+            </tr>
+            
+            <tr>
+                <td> <input type="text" id="name" placeholder="이름입력" required> </td>
+                <td> <input type="text" id="phone" placeholder="전화번호 입력" required> </td>
+                <td> <input type="email" id="email" placeholder="이메일 입력" required> </td>
+            </tr>
+            <tr>
+                <td colspan="3"> <input type="button" id="btn" value="추가"></td>
+            </tr>
+        </table>
+        
+    </form>
+    <hr>
+
+    <div>
+        <h2>고객목록</h2>
+    </div>
+    
+    <table id="list" border="1" class="outputTable"> 
+        <tr>
+            <th>고객 이름</th>
+            <th>연락처(전화번호)</th>
+            <th>이메일</th>
+        </tr>
+    </table>
+
+</body>
+</html>

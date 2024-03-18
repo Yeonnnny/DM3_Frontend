@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        /*
+        img{
+            display: block;
+            margin: 10px;
+            width: 100px;
+            border: 1px solid red ;
+            cursor: pointer;
+        } 
+        */
+        
+        div>img.second{
+            /* display: none; */
+            visibility: hidden;
+            
+        }
+
+        div.radius{
+            background-color: paleturquoise;
+            width: 200px;
+            height: 60px;
+            border-radius: 20px;
+            box-shadow: 5px 5px 5px grey;
+            cursor: pointer;
+        }
+        
+/*-------------------------------------------------------------*/
+        div.search{
+            width: 500px;
+            height: 60px;
+            border-radius: 20px;
+            box-shadow: 5px 5px 5px grey;
+            cursor: pointer;
+        }
+
+        div.search>input{
+            display: inline-block;
+            padding: 5px ;
+            padding-top : 20px;
+            border: none;
+            outline: none;
+            margin-left: 20px;
+            width: 400px;
+            height: 30px;
+        }
+
+        div.search>img{
+            float: right;
+        }
+
+    </style>
+</head>
+<body>
+    <h3>Display 속성</h3>
+    <p>
+        none, block, inline, inline-block 속성값을 이용하여 화면에 출력 방법을 제어할 수 있다.
+    </p>
+    <div>
+        <img src="../img/face1.png" alt="첫번째 얼굴">
+        <img src="../img/face2.png" alt="두번째 얼굴" class="second">
+        <img src="../img/face3.png" alt="세번째 얼굴">
+        <img src="../img/face4.png" alt="네번째 얼굴">
+        <img src="../img/face5.png" alt="다섯번째 얼굴">
+    </div>
+
+    <hr>
+    
+    <h3>둥근 테두리 (border-radius)</h3>
+    <div class="radius">
+        
+    </div>    
+    
+    <hr>
+    <h3>(연습)둥근 테두리를 이용한 검색창</h3>
+    <div class="search">
+        <img src="../img/magnifier.png" alt="돋보기">
+        <input type="text" placeholder="검색어를 입력해주세요">
+    </div>    
+
+
+
+
+
+</body>
+</html>

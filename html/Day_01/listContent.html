@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>목록 콘텐츠를 표기하는 태그</title>
+</head>
+<body>
+
+    <h2>목록 콘텐츠를 표기하는 태그</h2>
+
+    <p>
+        목록은 순서목록과 기호목록으로 구분할 수 있다. <br>
+        목록은 개별적인 항목으로 만들어져 있다. 
+    </p>
+    <hr>
+
+    <h3>ul 태그, li 태그 - Unordered List, List</h3>
+    <ul> <!-- 기호 목록-->
+        <li>항목 1</li>
+        <li>항목 2</li>
+        <li>항목 3</li>
+        <li>항목 4</li>
+    </ul>
+    <hr>
+    <h3>list 중첩</h3>
+    
+    
+    <h3>ol 태그, li 태그 - Ordered List, List</h3>
+    <ol type="i"> <!-- 순서 목록 type 지정 가능 (1:숫자, a: 영문소문자, A: 영문대문자, i:로마숫자 소문자, I:로마숫자 대문자)-->
+        <li>항목 1</li>
+        <li>항목 2</li>
+        <li>항목 3</li>
+        <li>항목 4</li>
+    </ol>
+    <hr>
+    
+    <h3>list 중첩</h3>
+    <ul> 
+        <li> 항목 1
+            <ul>
+                <li>중첩1</li>
+                <li>중첩2</li>
+                <li>중첩3</li>
+                <li>중첩4</li>
+                <li>중첩5</li>
+                <li>중첩6</li>
+            </ul>
+        </li>
+        <li>항목 2</li>
+        <li>항목 3</li>
+        <li>항목 4</li>
+    </ul>
+    <hr>
+
+    <h3>사용자 정의 목록(dl, dt, dd) </h3>
+    <p>
+        책의 특정 단어를 설명하기 위한 주석이나 사전처럼  특정 문자를<br>
+        설명하는 정의 형태를 만들 때 사용되는 태그
+    </p>
+
+    <h4>dl - definition list 정의 목록</h4>
+    <h4>dt - definition term 정의 목록</h4>
+    <h4>dd - definition descript 정의 목록</h4>
+
+    <dl>
+        <dt><b>제목</b></dt>
+        <dd>설명1</dd>
+        <dd>설명2</dd>
+    </dl>
+
+    <p>
+        dl태그는 첫번째 자식태그는 dt이며, dd 태그는 설명을 쓸 때 사용 <br>
+        dt와 dl 이외의 자식은 가질 수 없음
+    </p>
+
+</body>
+</html>

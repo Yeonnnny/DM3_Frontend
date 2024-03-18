@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수의 선언과 Scope</title>
+</head>
+<body>
+
+    <h2>변수의 선언과 Scope</h2>
+    <p>출력결과는 콘솔창에서 확인</p>
+
+    <p>자바스크립트 : Weakly typed 언어 -> 변수를 선언한 후 다른 타입을 대입해도 상관없음</p>
+    <p>자바 : Strongly typed 언어 -> 문법이 엄격한 언어</p>
+
+    <script>
+        // var 
+        // let 
+        // const
+        var a = "스물";
+        var a = 20; // 에러 안남;; -> var 사용 지양
+
+        let b = '서른';
+        // let b = 30; // 에러 발생 : 같은 변수를 두 번 이상 선언 불가능함
+
+        const c = "마흔";
+        // c=40; // 에러 발생 : const는 final과 같음. 변수에 할당된 값을 변경할 수 없음
+
+        function add(a,b){
+            let result = a+b;  // scope : 함수 내부에서만 사용가능
+            console.log("합계 : "+result);
+        }
+
+        add(10,20);
+        // console.log(result); // 오류
+
+        let total = 0;
+        for(let i=1; i<=10;i++){
+            total+=i;
+        }
+        console.log("1~10까지의 합계 : "+total);
+        // console.log("마지막 i값 : "+i); // 오류
+
+        console.log("---------------------------------");
+        let x = 20;
+        {
+            let x = 10; // 지역 공간의 x변수를 새롭게! 선언하는 것임
+            console.log(x);
+        }
+        console.log(x); 
+
+        console.log("---------------------------------");
+        let y = 20;
+        {
+            y = 10; // 전역 공간의 y 변수를 사용하는 것임
+            console.log(y);
+        }
+        console.log(y); 
+
+        /*
+            Javascript Scope의 개념
+            - global, local
+            1) 지역 공간에서는 글로벌 공간에 접근 가능. 그러나, 반대는 불가능
+            2) 지역변수는 전역변수보다 우선순위가 높음
+            3) arrow function (화살표 함수) : scope의 개념이 없음
+        */
+
+        console.log("----------------const----------------");
+        // const는 선언과 동시에 초기화해야 함 (undefined인 채로 둘 수 없음)
+        const k = 20;
+        
+        const l = {x:10, y:20};
+        console.log(l);
+
+        // l = {x:100,y:200}; // 에러
+        
+        l['x']=100; // 에러 안남
+        console.log(l);
+
+
+        
+
+
+    </script>
+    
+</body>
+</html>

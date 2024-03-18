@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지를 표기하는 태그</title>
+</head>
+<body>
+    <h2>이미지를 표기하는 태그</h2>
+    <p>
+        img 태그는 닫는 태그가 없는 오픈태그이다. <br>
+        이미지의 크기는 img 태그의 속성인 width, height를 이용해 지정할 수 있으나 <br>
+        CSS의 속성을 이용해 수정하는 방법이 권장된다. <br>
+        이미지를 볼 수 없는 환경(시각장애인들이 사용하는 페이지-낭독페이지? or 네트워크 환경)에서 이미지의 정보를 출력할 때 사용
+    </p>
+    <hr>
+
+    <div>
+        <img src="../img/cake.jpg" alt="케이크", height="300px">
+        <img src="../img/dog.jpg" alt="강아지", height="300px">
+        <img src="https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262_960_720.jpg" alt="고양이", height="300px">
+    </div>
+    <hr>
+
+    <h3>경로 (path) </h3>
+    <ol>
+        <li>
+            <h4>상대경로 : 현재 문서를 기준으로 만들어지는 경로</h4>
+            <ul>
+                <li>. : 현재 위치</li>
+                <li>.. : 상위 위치</li>
+            </ul>
+        </li>
+        <li>
+            <h4>절대경로 : 특정 기준점을 기준으로 만들어지는 경로</h4>
+            <ul>
+                <li>네이버 : http://naver.com</li>
+                <li>Window에서 특정 문서를 나타내는 경로 : D:\user\Desktop\workspace_kd3\Test_Frontend\html\img </li>
+            </ul>
+        </li>
+            
+    </ol>
+    <hr>
+    
+    <h3>이미지에 설명을 함께 표시하기 (figure 태그)</h3>
+    <figure>
+        <img src="https://cdn.pixabay.com/photo/2019/11/22/03/58/cat-4644008_1280.jpg" alt="귀여운 작은 고양이", height="300px">
+        <figcaption>#고양이 #귀여움</figcaption>
+    </figure>
+    <hr>
+    
+    <p>
+        <h3>svg 이미지 </h3>
+        <img src="../img/icon.svg" alt="메롱", height="150px">
+    </p>
+    <hr>
+    
+
+    <div>
+        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA2MjJfMjcw%2FMDAxNjg3NDE1MzkwMzQ4.ustHqtPmhYc_WHIt-SJNDzlJSR7pizI9D8UUUcC9UQcg.VYwrajh5LZO36cojf4NtLiNysxAE5m1IGutxFwL-4Ugg.JPEG.7948591%2FIMG_0125.jpg&type=sc960_832" alt="대흥떡집 앙금떡", width="200px">
+        <h1>도연이 위시 떡</h1>
+        <p>인스타 광고를 보고 먹고싶었는데 다 품절이다. 이럴수가</p>
+    </div>
+
+</body>
+</html>

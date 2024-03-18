@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Sticky 연습</title>
+
+    <style>
+        /*본문 영역에 새로 스크롤 생성*/
+        div.container{
+            padding-bottom: 2000px;
+        }
+        /*검색창 영역*/
+        div.search{
+            margin: 0 auto;
+            background-color: white;
+            width: 500px;
+            height: 50px;
+            border-radius: 25px;
+            border : 1px solid grey;
+            box-shadow: 5px 5px 5px grey;
+            padding: 0 10px;
+        
+            /*flex 지정*/
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        /*입력상자*/
+        input[type="text"]{
+            display: inline-block;
+            width: 380px;
+            height: 25px;
+            padding: 5px 5px 5px 5px;
+            /* margin-top: 10px;
+            margin-left: 10px; */
+            border: 0px;
+            outline: none;
+
+        }
+        /*Sticky 영역 설정*/
+        div.sticky{
+            position: sticky;
+            height: 80px;
+            top: 0px;   
+            padding: 20px 5px 5px 5px;
+            background-color: rgba(135, 206, 235, 0.9);
+        }
+
+        
+    </style>
+
+</head>
+<body>
+    <h2>Position Sticky</h2>
+
+    <!--Sticky 영역-->
+    <div class="sticky">
+        <div class="search">
+            <input type="text" placeholder="검색어를 입력하세요">
+            <img src="../img/magnifier.png" alt="돋보기">
+        </div>
+    </div>
+    
+    <!--본문 영역-->
+    <div class="container">
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus fugiat eligendi aliquam natus facilis ipsam cumque velit consectetur explicabo odit repudiandae mollitia autem sapiente laboriosam sequi eos, obcaecati, corporis quia?
+        </p>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus fugiat eligendi aliquam natus facilis ipsam cumque velit consectetur explicabo odit repudiandae mollitia autem sapiente laboriosam sequi eos, obcaecati, corporis quia?
+        </p>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus fugiat eligendi aliquam natus facilis ipsam cumque velit consectetur explicabo odit repudiandae mollitia autem sapiente laboriosam sequi eos, obcaecati, corporis quia?
+        </p>
+    </div>
+
+
+</body>
+</html>

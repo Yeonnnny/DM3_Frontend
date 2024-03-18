@@ -1,0 +1,60 @@
+.header{
+    text-align: center;
+    padding: 80px 0;
+}
+
+.header>h1>a>img{
+    height: 40px;
+}
+
+/* CSS 주석 */
+.content{
+    width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #f1f1f1;    
+}
+.content ul>li{
+    margin: 20px 0;
+}
+
+.content ul>li>label,
+.content ul>li>label>span.gender {
+    display: inline-block; /* 인라인 <-> 블록 */
+    width: 250px;
+}
+
+
+.content ul>li>select,
+.content ul>li>input,
+.content ul>li input:not(.check) {
+    margin: 10px 0;
+    padding: 10px 0;
+    width: 200px;
+}
+
+
+.content .buttonWrap>input{
+    display: block;
+    background-color: #09b155;
+    color: white;
+    border: inherit;
+    width: 300px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px;
+    margin: 0 auto;
+}   
+
+.footer{
+    padding: 50px 0;
+    text-align: center;
+}
+.footer li{
+    margin: 10px ;
+}
+
+.footer ul>li>span{
+    line-height: 30px;
+}

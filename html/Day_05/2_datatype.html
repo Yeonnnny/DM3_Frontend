@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datatype과 변수</title>
+</head>
+<body>
+
+    <h2 id="header">자바스크립트 결과는 콘솔창!</h2>
+
+    <script>
+        //자료형
+        // 1) 문자열 : "대한민국", '대한민국', `대한민국`
+        let str = "대한민국"
+        console.log(str);
+        console.log(typeof str);
+        console.log(`철수는 ${str} 사람입니다.`);
+
+        // 2) 숫자형 : 정수, 실수 모두 포함된 숫자
+        let number = 12;
+        console.log('나이는 '+number);
+        console.log(typeof number);     // + 문자열 겳합으로 사용
+        console.log(number/5);          // 연산은 실수형으로
+
+        // 3) 불리언 형 :true, false (0을 제외한 모든 숫자가 true)
+        let bool = true;
+        console.log(typeof bool);
+        console.log(10>20);
+        if(1) console.log("1은 true와 같다.")
+
+
+        // 4) 함수형
+
+        //선언 함수
+        function add(a,b){
+            return a+b;
+        }
+        console.log(add(10,20));
+        
+        let sum = add;
+        
+        //표현 함수
+        let minus = function (a,b){
+            return a-b;
+        };
+        
+        console.log(typeof add);
+        console.log(typeof sum);
+        console.log(typeof minus);
+        console.log(`add 결과 : ${add(10,20)}`);
+        console.log(`sum 결과 : ${sum(100,1)}`);
+        console.log(`minus 결과 : ${minus(10,20)}`);
+        
+        //호리즌? 
+        function add(a,b){
+            return a-b;
+        }
+        console.log(add(10,20));
+        
+        
+        // 5) 객체형 : 객체의 종류가 여러가지 있음.
+        let obj = {name: '홍길동', age : 25};
+        console.log(typeof obj);
+        console.log('이름은 '+obj['name']);
+        console.log('나이는 '+obj.age);
+        console.log(obj)
+        
+        // 5-2) JSON : 주로 비동기통신을 위한 데이터 타입
+        // 비동기 통신 : 여러 개 주어진 일을 동시에 작업할 수 있음 ex) 데이터 request& response 과정이 굉장히 빨라야함. 그 과정에서 데이터는 직렬화되어야 함. JSON은 직렬화 기능이 탑재되어 있음.
+        // JSON은 key를 " " 안에 써줘야 함!!!
+        let data = {"name": '홍길동', "age" : 25};
+        console.log('----------------------------------')        
+        
+        // 5-3) array : 배열
+        let ary = [2,4,6,8];
+        // let ary = [2,4,6,[1,2,3,4,8]]; // 2차원 배열, 8을 꺼내려면->ary[3][4]
+        console.log(typeof ary);
+        console.log(ary);
+        console.log(ary[1]);
+        console.log('----------------------------------')        
+        
+        // 5-4) html 객체 
+        let html = document.getElementById('header');
+        console.log(typeof html);
+        console.log(html);
+        // html에 닫힘 태그가 있는 경우 안의 내용을 바꿀 수 있음
+        let a = html.innerHTML; // 끝태그가 있는 태그에 적용할 수 있음
+        console.log(a)
+        html.innerHTML = "바꿨습니다!!";
+        // alert(html);
+
+        // 5-5) null 객체 - 오류
+        //      변수가 아무 객체도 가르키지 않고 있음을 나타냄 - JS V1부터 나온 오류
+        let temp = null;
+        console.log(typeof temp);
+
+
+        // 6. undefined
+        // 변수에 값이 존재하지 않음을 나타냄
+        // 변수를 만들고 초기화하지 않으면 undefined임
+        let noInit;
+        console.log(noInit) ;
+        console.log(typeof noInit) ;
+
+        // 7. Symbol : 유일성 보장을 위해 사용
+        let b = Symbol();
+        
+
+
+
+        // 연습 : 결과를 브라우저에 출력 (사용X)
+        // document.write(typeof bool);
+
+
+    </script>
+
+
+</body>
+</html>

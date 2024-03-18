@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 CSS 관리하기</title>
+    <script defer src="./script/A20_css.js"></script>
+
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+            visibility: hidden;
+        }
+        .item{
+            width: 100px;
+            height: 100px;
+            background-color: violet;
+            transition: all 1s ease-in-out;
+        }
+        .item:hover{
+            width: 200px;
+            height: 200px;
+            
+        }
+
+        .myimg>img{
+            opacity: 0.0;
+            width: 100px;
+            height: 70px;
+            transition: all 1s ease-in-out;
+        }
+        .myimg>img:hover{
+            opacity: 1.0;
+            width: 200px;
+            height: 140px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <h2>자바스크립트 CSS 관리하기</h2>
+    <div>
+        <input type="button" id="change" value="바꾸기">
+        <input type="button" id="view" value="나타나기">
+        <input type="button" id="changeColor" value="색깔바꾸기">
+        <input type="button" id="darkModeOn" value="다크모드">
+        <input type="button" id="darkModeOff" value="다크모드해제">
+    </div>
+    <p id="song">
+        나리나리 개나리 입에 따다 물고요 <br>
+        병아리떼 뿅뿅뿅 봄나들이 갑니다
+    </p>
+
+    <div class="box"></div>
+
+    <h2>아래의 상자는 CSS를 이용한 것임</h2>
+    <div class="item"></div>
+    <div class="myimg">
+        <img src="../img/dog.jpg" alt="강아지">
+    </div>
+
+</body>
+</html>

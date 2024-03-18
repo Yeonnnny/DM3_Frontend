@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>단순 선택자의 사용 예시</title>
+
+    <style>
+        *{
+            font-family: 'Times New Roman', Times, serif;
+            color: rgb(26, 4, 78);    
+        }
+        .one{
+            background-color: rgb(237, 174, 195);
+            
+        }
+        
+        p.test{
+            background-color: yellow;
+        }
+
+        #two{
+            font-size: 1.5em;
+        }
+
+        #two, .three{
+            color: white;
+            background-color: black;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <h2>단순 선택자의 사용 예</h2>
+    <h3>전체 선택자, 태그 선택자, 그룹 선택자, 클래스 선택자, 아이디 선택자</h3>
+    
+    <p class="one">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Unde neque laudantium reprehenderit nihil saepe minima rerum nisi quos, 
+        officia consequuntur dolore perferendis veniam excepturi officiis? 
+        Nisi aperiam aut voluptas ullam.
+    </p>
+    <p class="three">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Unde neque laudantium reprehenderit nihil saepe minima rerum nisi quos, 
+        officia consequuntur dolore perferendis veniam excepturi officiis? 
+        Nisi aperiam aut voluptas ullam.
+    </p>
+    <p class="one test">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Unde neque laudantium reprehenderit nihil saepe minima rerum nisi quos, 
+        officia consequuntur dolore perferendis veniam excepturi officiis? 
+        Nisi aperiam aut voluptas ullam.
+    </p>
+    <p >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Unde neque laudantium reprehenderit nihil saepe minima rerum nisi quos, 
+        officia consequuntur dolore perferendis veniam excepturi officiis? 
+        Nisi aperiam aut voluptas ullam.
+    </p>
+    <p id="two">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Unde neque laudantium reprehenderit nihil saepe minima rerum nisi quos, 
+        officia consequuntur dolore perferendis veniam excepturi officiis? 
+        Nisi aperiam aut voluptas ullam.
+    </p>
+
+</body>
+</html>

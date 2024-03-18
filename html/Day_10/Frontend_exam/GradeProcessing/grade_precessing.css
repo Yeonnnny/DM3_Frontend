@@ -1,0 +1,85 @@
+
+body{
+    background-color: aliceblue;
+    font-family:"Gowun Dodum", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.wrapper{
+    width: 900px;
+    margin: 0 auto;
+}
+
+#title{
+    height: 1.6em;
+    background-color: black;
+    color: white; 
+    text-align: center;
+    margin: 10px auto;
+    padding: 7px;
+    margin-top: 25px;
+}
+
+.wrapper>ol{
+    margin-left: 130px;
+}
+
+.wrapper li{
+    width: 500px;
+    padding: 15px;
+    font-size: 1.2em;
+}
+
+.wrapper li>span{
+    display: inline-block;
+    width: 200px;
+}
+
+.wrapper>input[type="button"]{
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    margin-left: 360px;
+    padding: 10px;
+    background: linear-gradient(to left, rgb(15, 52, 242),rgb(94, 174, 227));
+    color: white;
+    border: 0;
+    font-size: 1.1em;
+    font-family: "Gowun Dodum", sans-serif;
+    font-weight: bolder;
+}
+
+.wrapper>input[type="button"]:hover{
+    box-shadow: 0 3px 3px 0px rgb(74, 71, 71);
+    font-size: 1.25em;
+}
+.wrapper>input[type="button"]:active{
+    box-shadow: none;
+    margin-left: 361.5px;
+    margin-top: 1.5px;
+}
+
+
+.wrapper>p{
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.wrapper>div{
+    height: 65px;
+    text-align: center;
+    margin-bottom:25px;
+}
+
+.wrapper>div>h2{
+    display: inline-block;
+    font-weight: bold;
+    color: rgb(155, 197, 216);
+    text-shadow: 1px 1px 2px  rgb(60, 60, 63);
+}
+
+#avg{
+    background-color: yellow;
+}

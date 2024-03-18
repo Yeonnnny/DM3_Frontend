@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 검증 코드</title>
+    <script defer src="./script/A19_form_validation.js"></script>
+
+    <style>
+        form tr>td:nth-child(1){
+            font-weight: bold;
+        }
+        table{
+            border: 1px solid grey;
+            margin: 10px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <h2>회원가입 검증</h2>
+
+    <ul>
+        <li>아이디의 길이는 3~5글자 사이로 입력받는다.</li>
+        <li>비밀번호의 길이는 3~5글자 사이로 입력받고, 비밀번호 확인과 동일해야만함</li>
+        <li>이름은 입력받기만 하면 됨</li>
+        <li>성별은 읽어오기만 할 것 radio</li>
+        <li>취미도 읽어오기만 할 것 checkbox</li>
+        <li>전화번호 : 국번(select 상자 읽어오기), 나머지 번호는 숫자 8자리로 할것 공백 없이 입력상자 하나로  </li>
+        <li>전화번호 : 국번(select 상자 읽어오기), 나머지 번호는 숫자 4자리 </li>
+        <li>회원가입버튼, 취소 버튼</li>
+        <li>모든 경고와 결과는 경고창으로 할 것!</li>
+    </ul>
+    <hr>
+    <h2>[ 회원 가입 ]</h2>
+    <form action="" id="joinForm">
+        <table border="1px">
+            <tr>
+                <td>아이디</td>
+                <td><input type="text" id="id"> <input type="button" id="btn_id" value="아이디 확인"></td>
+            </tr>
+            <tr>
+                <td>비밀번호</td>
+                <td><input type="password" id="pwd"></td>
+            </tr>
+            <tr>
+                <td>비밀번호 확인</td>
+                <td><input type="password" id="pwdConfirm"> <input type="button" id="btn_pwd" value="비밀번호 확인"></td>
+            </tr>
+            <tr>
+                <td>이름</td>
+                <td><input type="text" id="name"></td>
+            </tr>
+            <tr>
+                <td>성별</td>
+                <td>
+                    <input type="radio" class="gender" name="gender" value="여자">여성
+                    <input type="radio" class="gender" name="gender" value="남자">남성
+                </td>
+            </tr>
+            <tr>
+                <td>취미</td>
+                <td>
+                    <input type="checkbox" class="hobby" name="hobby" value="넷플릭스시청"> 넷플릭스시청
+                    <input type="checkbox" class="hobby" name="hobby" value="자전거타기"> 자전거타기
+                    <input type="checkbox" class="hobby" name="hobby" value="책읽기"> 책읽기
+                    <input type="checkbox" class="hobby" name="hobby" value="여행"> 여행
+                    <input type="checkbox" class="hobby" name="hobby" value="맛집탐방"> 맛집탐방
+                </td>
+            </tr>
+            <tr>
+                <td>전화번호</td>
+                <td>
+                    <select name="localnum" id="localnum">
+                        <option value="010">010</option>
+                        <option value="02">02</option>
+                        <option value="031">031</option>
+                    </select>
+                    <input type="text" id="phone">
+                </td>
+            </tr>
+            <tr class="bottom">
+                <td >
+                    <input type="button" id="join" value="회원가입"> 
+                    <input type="button" id="cancel" value="취소">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>

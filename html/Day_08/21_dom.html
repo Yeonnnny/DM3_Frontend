@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - form에 접근하기</title>
+    <script defer src="./script/A18_dom.js"></script>
+
+    <style>
+        input {
+            text-align: right;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <h1>form에 접근하기</h1>
+    
+    <h3>(1번) input 데이터를 읽어 결과 처리하기</h3>
+
+    <div>
+        키(cm) : <input type="text" id="height" placeholder="키"> &nbsp;
+        몸무게(kg) : <input type="text" id="weight" placeholder="몸무게"> &nbsp;
+        <input type="button" id="calc1" value="계산하기"><br>
+        <h3 id="target1"></h3>
+    </div>
+    <hr>
+
+    <h3>(2번) select 값을 읽어 결과 처리하기</h3>
+    
+    <div>
+        <select name="" id="language">
+            <option value="Java"> 자바언어</option>
+            <option value="Python"> 파이썬</option>
+            <option value="Data Analysis"> 데이터 분석</option>
+            <option value="Full Stack(Front 포함)"> 백엔드 개발</option>
+        </select>
+        
+        <input type="button" id="calc2" value="자신있는 언어는?"><br>
+        <h3 id="target2"></h3>
+    </div>
+    <hr>
+    
+    <h3>(3번) 연습문제</h3>
+    
+    <div>
+        <form action="" id="form3">
+            <input type="text" id="x" placeholder="0"> &nbsp;
+            <select name="" id="operation">
+                <option value="plus"> +</option>
+                <option value="minus"> -</option>
+                <option value="multiple"> *</option>
+                <option value="divide"> /</option>
+            </select>
+            <input type="text" id="y" placeholder="0"> &nbsp;
+    
+            <input type="button" id="calc3" value="=">
+            
+            <input type="text" id="target3">
+            
+            <input type="button" id="clear" value="clear">
+        </form>
+    </div>
+    <hr>
+
+
+
+    <h3>(4) radio 버튼의 값 읽어 처리하기</h3>
+    <div>
+        <input type="radio" name="gender" class="gender" value="남자">남성 &nbsp;
+        <input type="radio" name="gender" class="gender" value="여자">여성 &nbsp;
+        <input type="button" name="" id="calc4" value="Click">
+        <h3 id="target4"></h3>
+    </div>
+    <hr>
+
+
+
+    <h3>(5) checkbox 값 읽어 처리하기 (Netflix 인기 드라마 선택-다수선택가능)</h3>
+    
+    <div>
+        <input type="checkbox" name="netflix" class="netflix" value="오징어 게임" checked>오징어 게임 &nbsp;
+        <input type="checkbox" name="netflix" class="netflix" value="살인자 O난감">살인자 O난감 &nbsp;
+        <input type="checkbox" name="netflix" class="netflix" value="미스터 선샤인">미스터 선샤인 &nbsp;
+        <input type="checkbox" name="netflix" class="netflix" value="더 글로리">더 글로리 &nbsp;
+        <input type="checkbox" name="netflix" class="netflix" value="슬기로운 의사생활">슬기로운 의사생활 &nbsp;
+        
+        <input type="button" name="" id="calc5" value="Click">
+        <h3 id="target5"></h3>
+    </div>
+    <hr>
+    
+
+
+    <h3>(6) Textarea 에 입력된 글자 처리</h3>
+    
+    <div>
+        <textarea name="" id="textbox" cols="30" rows="10"></textarea> <br>
+        <span id="count" style="color: red; font-weight: bold;">총 글자수 : 0</span> <br> <!--글자수 세기-->
+        
+        <input type="button" name="" id="calc6" value="Click"> <!--글자를 복사하는 용도-->
+        <h3 id="target6"></h3>
+    </div>
+    <hr>
+    
+
+    
+    <h3>(7) 기타 입력상자 처리 (color, date)</h3>
+    <div>
+        <input type="color" id="color"> <br>
+        <input type="date" id="date"> <br>
+        
+        <input type="button" name="" id="calc7" value="Click">
+        <h3 id="target7"></h3>
+    </div>
+
+
+
+
+</body>
+</html>
